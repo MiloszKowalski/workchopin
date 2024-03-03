@@ -1,0 +1,16 @@
+{
+  "name": "workchopin-core",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/workchopin-core/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "./jest.config.ts",
+        "passWithNoTests": false
+      }
+    }
+  }
+}

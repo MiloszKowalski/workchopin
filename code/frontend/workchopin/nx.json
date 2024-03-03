@@ -67,6 +67,9 @@
         "style": "scss",
         "linter": "eslint"
       }
+    },
+    "@nx/react": {
+      "library": {}
     }
   },
   "nxCloudAccessToken": "Zjc2ZTY2YWQtMjhhZC00Y2Y1LWI2MzktYTliOGM5MDE1YzhifHJlYWQtd3JpdGU="

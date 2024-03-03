@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@workchopin/workchopin-core": [
+        "libs/shared/workchopin-core/src/index.ts"
+      ],
+      "@workchopin/workchopin-core/server": [
+        "libs/shared/workchopin-core/src/server.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
