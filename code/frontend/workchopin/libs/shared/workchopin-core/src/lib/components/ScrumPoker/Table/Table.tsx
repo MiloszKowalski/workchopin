@@ -28,9 +28,13 @@ const cards = new Map<string, string>([
 ]);
 
 export function Table() {
-  return Array.from(cards.entries()).map(([value, image]) => (
-    <Card value={value} imageSrc={image} />
-  ));
+  return (
+    <div className="flex flex-wrap justify-center mx-auto w-3/5">
+      {Array.from(cards.entries()).map(([value, image]) => (
+        <Card key={value} value={value} imageSrc={image} />
+      ))}
+    </div>
+  );
 }
 
 export default Table;
