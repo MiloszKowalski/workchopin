@@ -6,7 +6,7 @@ export interface CardProps {
 }
 
 export function Card({ imageSrc, value }: CardProps) {
-  return <Image src={imageSrc} alt={value} />;
+  return <Image width={240} height={340} src={imageSrc} alt={value} />;
 }
 
 export default Card;

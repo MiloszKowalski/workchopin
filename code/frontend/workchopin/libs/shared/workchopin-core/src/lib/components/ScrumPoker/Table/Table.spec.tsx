@@ -1,13 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Card from './Card';
+import Table from './Table';
 
-describe('Card', () => {
+describe('Table', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(
-      <Card value="0" imageSrc="https://picsum.photos/200/300" />
-    );
+    const { baseElement } = render(<Table />);
     expect(baseElement).toBeTruthy();
   });
 });
