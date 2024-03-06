@@ -1,5 +1,8 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
+const {
+  backfaceVisibility,
+} = require('./src/tailwind-plugins/backfaceVisibility');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,5 +16,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [backfaceVisibility],
 };
