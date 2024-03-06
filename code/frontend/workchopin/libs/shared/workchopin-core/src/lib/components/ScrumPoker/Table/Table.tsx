@@ -29,7 +29,7 @@ const cards = new Map<string, string>([
 
 export function Table() {
   return (
-    <div className="flex flex-wrap justify-center mx-auto w-3/5">
+    <div className="relative grid grid-cols-4 justify-items-center gap-6 w-max mx-auto mt-10">
       {Array.from(cards.entries()).map(([value, image]) => (
         <Card key={value} value={value} imageSrc={image} />
       ))}
