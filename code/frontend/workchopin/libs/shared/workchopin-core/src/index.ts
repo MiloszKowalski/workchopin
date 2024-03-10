@@ -3,3 +3,5 @@
 export * from './lib/workchopin-core';
 
 export * from './lib/components/ScrumPoker/Table/Table';
+
+export * from './lib/components/Menus/PianoMenu/PianoMenu';
