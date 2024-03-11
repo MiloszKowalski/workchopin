@@ -1,4 +1,14 @@
-import { PianoMenu, Table } from '@workchopin/workchopin-core';
+import {
+  ArrowRightIcon,
+  ExitIcon,
+  FlashIcon,
+  InfoIcon,
+  PianoMenu,
+  PlusIcon,
+  RecentIcon,
+  SaveIcon,
+  SettingsIcon,
+} from '@workchopin/workchopin-core';
 
 export default async function Index() {
   return (
@@ -8,23 +18,23 @@ export default async function Index() {
       <PianoMenu
         items={[
           {
-            icon: <>➕</>,
+            icon: <PlusIcon />,
             title: 'Create new session',
-            subItem: { icon: <>⚡</>, title: 'Quick session' },
+            subItem: { icon: <FlashIcon />, title: 'Quick session' },
           },
-          { icon: <>➡️</>, title: 'Join existing session' },
+          { icon: <ArrowRightIcon />, title: 'Join existing session' },
           {
-            icon: <>💾</>,
+            icon: <SaveIcon />,
             title: 'Saved session',
-            subItem: { icon: <>🕑</>, title: 'Last session' },
+            subItem: { icon: <RecentIcon />, title: 'Last session' },
           },
           {
-            icon: <>⚙️</>,
+            icon: <SettingsIcon />,
             title: 'Preferences',
-            subItem: { icon: <>ℹ️</>, title: 'About' },
+            subItem: { icon: <InfoIcon />, title: 'About' },
           },
           {
-            icon: <>🚪</>,
+            icon: <ExitIcon />,
             title: 'Exit',
           },
         ]}

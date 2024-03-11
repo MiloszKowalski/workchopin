@@ -27,11 +27,11 @@ export function PianoMenu(props: PianoMenuProps) {
           </button>
           {x.subItem && (
             <button
-              className="absolute pl-4 flex gap-2 w-60 right-0 -bottom-6 bg-black
-            text-white rounded-l-xl z-10 p-2 py-3 font-semibold text-left"
+              className="absolute pl-4 flex items-center gap-3 w-60 right-0 -bottom-5 bg-black
+              text-white rounded-l-xl z-10 p-2 py-3 font-semibold text-left"
             >
-              <span>{x.subItem.icon}</span>
-              <span>{x.subItem.title}</span>
+              <span className="[&_path]:fill-white">{x.subItem.icon}</span>
+              <span className="pb-[1.5px]">{x.subItem.title}</span>
             </button>
           )}
         </li>
