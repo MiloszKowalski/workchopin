@@ -45,7 +45,4 @@ Thumbs.db
 out
 
 # yarn
-.yarn
-
-# VS Code
-.vscode/settings.json
+/.yarn
