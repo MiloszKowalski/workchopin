@@ -9,12 +9,16 @@ import {
   SaveIcon,
   SettingsIcon,
 } from '@workchopin/workchopin-core';
+import { useTranslation } from '../i18n';
+import { I18nParams } from '../../@types/i18n';
 
-export default async function Index() {
+export default async function Index({ params: { lng } }: I18nParams) {
+  const { t } = await useTranslation(lng);
+
   return (
     <div className="h-screen flex justify-center flex-col gap-2 text-center">
-      <h1 className="text-4xl font-bold">🎼 WorkChopin</h1>
-      <h2 className="text-xl">The symphony of teamwork.</h2>
+      <h1 className="text-4xl font-bold">🎼 {t('title')}</h1>
+      <h2 className="text-xl">{t('subtitle')}</h2>
       <PianoMenu
         items={[
           {
