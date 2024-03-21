@@ -3,6 +3,7 @@ const { join } = require('path');
 const {
   backfaceVisibility,
 } = require('./src/tailwind-plugins/backfaceVisibility');
+const tailwindRadix = require('tailwindcss-radix')();
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -35,5 +36,5 @@ module.exports = {
       },
     },
   },
-  plugins: [backfaceVisibility],
+  plugins: [backfaceVisibility, tailwindRadix],
 };
