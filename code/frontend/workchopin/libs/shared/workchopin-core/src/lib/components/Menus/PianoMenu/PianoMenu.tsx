@@ -22,7 +22,7 @@ export function PianoMenu(props: PianoMenuProps) {
           className="relative text-left  border-t-4 first:border-t-0"
         >
           <button className="flex gap-4 text-2xl font-bold p-8">
-            <span>{x.icon}</span>
+            <span className='w-9'>{x.icon}</span>
             <span>{x.title}</span>
           </button>
           {x.subItem && (
@@ -30,7 +30,7 @@ export function PianoMenu(props: PianoMenuProps) {
               className="absolute pl-4 flex items-center gap-3 w-60 right-0 -bottom-5 bg-black
               text-white rounded-l-xl z-10 p-2 py-3 font-semibold text-left"
             >
-              <span className="[&_path]:fill-white">{x.subItem.icon}</span>
+              <span className="w-5 [&_path]:fill-white">{x.subItem.icon}</span>
               <span className="pb-[1.5px]">{x.subItem.title}</span>
             </button>
           )}
