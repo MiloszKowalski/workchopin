@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import acceptLanguage from 'accept-language';
-import { fallbackLng, languages, cookieName } from './app/i18n/settings';
+import { fallbackLng, languages, cookieName } from '@workchopin/workchopin-i18n';
 
 acceptLanguage.languages(languages);
 

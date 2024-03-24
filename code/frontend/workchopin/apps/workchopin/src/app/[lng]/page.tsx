@@ -10,16 +10,15 @@ import {
   SaveIcon,
   SettingsIcon,
 } from '@workchopin/workchopin-core';
-import { useTranslation } from '../i18n';
-import { I18nParams } from '../../@types/i18n';
+import { useTranslation, I18nParams } from '@workchopin/workchopin-i18n';
 
 export default async function Index({ params: { lng } }: I18nParams) {
   const { t } = await useTranslation(lng);
 
   return (
-    <div className='flex h-screen flex-col items-center p-4'>
+    <div className='flex flex-col items-center h-screen p-4'>
       <LanguageSelect />
-      <div className="flex flex-col justify-center my-auto gap-2 text-center">
+      <div className="flex flex-col justify-center gap-2 my-auto text-center ">
         <h1 className="text-4xl font-bold">🎼 {t('title')}</h1>
         <h2 className="text-xl">{t('subtitle')}</h2>
         <PianoMenu

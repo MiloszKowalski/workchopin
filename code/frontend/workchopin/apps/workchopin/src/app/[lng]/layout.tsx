@@ -1,6 +1,6 @@
 import '../global.css';
 import { dir } from 'i18next';
-import { languages } from '../i18n/settings';
+import { languages } from '@workchopin/workchopin-i18n';
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));

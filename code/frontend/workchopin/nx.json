@@ -48,6 +48,16 @@
       "options": {
         "targetName": "lint"
       }
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "previewTargetName": "preview",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "serveStaticTargetName": "serve-static"
+      }
     }
   ],
   "targetDefaults": {
@@ -69,7 +79,9 @@
       }
     },
     "@nx/react": {
-      "library": {}
+      "library": {
+        "unitTestRunner": "vitest"
+      }
     }
   },
   "nxCloudAccessToken": "Zjc2ZTY2YWQtMjhhZC00Y2Y1LWI2MzktYTliOGM5MDE1YzhifHJlYWQtd3JpdGU="

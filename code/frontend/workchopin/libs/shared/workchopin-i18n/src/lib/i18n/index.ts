@@ -35,3 +35,5 @@ export async function useTranslation(
     i18n: i18nextInstance,
   };
 }
+
+export * from './settings';

@@ -20,6 +20,12 @@
       ],
       "@workchopin/workchopin-core/server": [
         "libs/shared/workchopin-core/src/server.ts"
+      ],
+      "@workchopin/workchopin-i18n": [
+        "libs/shared/workchopin-i18n/src/index.ts"
+      ],
+      "@workchopin/workchopin-i18n/server": [
+        "libs/shared/workchopin-i18n/src/server.ts"
       ]
     }
   },
