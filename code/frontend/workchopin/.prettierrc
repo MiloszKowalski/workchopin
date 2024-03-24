@@ -1,3 +1,7 @@
 {
-  "singleQuote": true
+  "singleQuote": true,
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindConfig": "./apps/workchopin/tailwind.config.js"
 }
