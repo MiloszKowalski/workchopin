@@ -11,8 +11,8 @@ const initI18next = async (lng: string, ns: string) => {
     .use(
       resourcesToBackend(
         (language: string, namespace: string) =>
-          import(`./locales/${language}/${namespace}.json`)
-      )
+          import(`./locales/${language}/${namespace}.json`),
+      ),
     )
     .init(getOptions(lng, ns));
 
@@ -22,7 +22,7 @@ const initI18next = async (lng: string, ns: string) => {
 export async function useTranslation(
   lng: string,
   ns?: string,
-  options: { keyPrefix?: string } = {}
+  options: { keyPrefix?: string } = {},
 ) {
   const i18nextInstance = await initI18next(lng, ns ?? defaultNS);
 
@@ -30,10 +30,11 @@ export async function useTranslation(
     t: i18nextInstance.getFixedT(
       lng,
       Array.isArray(ns) ? ns[0] : ns,
-      options.keyPrefix
+      options.keyPrefix,
     ),
     i18n: i18nextInstance,
   };
 }
 
 export * from './settings';
+export * from './client';

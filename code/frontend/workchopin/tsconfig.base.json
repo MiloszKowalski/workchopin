@@ -26,6 +26,9 @@
       ],
       "@workchopin/workchopin-i18n/server": [
         "libs/shared/workchopin-i18n/src/server.ts"
+      ],
+      "@workchopin/workchopin-i18n/client": [
+        "libs/shared/workchopin-i18n/src/client.ts"
       ]
     }
   },
