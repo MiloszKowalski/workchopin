@@ -32,32 +32,35 @@ export function useTranslation(
   const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
 
-  if (isSSR && lng && i18n.resolvedLanguage !== lng) {
+  const shouldChangeLanguage = isSSR && lng && i18n.resolvedLanguage !== lng;
+
+  if (shouldChangeLanguage) {
     i18n.changeLanguage(lng);
-  } else {
-    const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage);
-
-    useEffect(() => {
-      if (activeLng === i18n.resolvedLanguage) {
-        return;
-      }
-      setActiveLng(i18n.resolvedLanguage);
-    }, [activeLng, i18n.resolvedLanguage]);
-
-    useEffect(() => {
-      if (!lng || i18n.resolvedLanguage === lng) {
-        return;
-      }
-      i18n.changeLanguage(lng);
-    }, [lng, i18n]);
-
-    useEffect(() => {
-      if (cookies.i18next === lng) {
-        return;
-      }
-
-      setCookie(cookieName, lng, { path: '/' });
-    }, [lng, cookies.i18next]);
   }
+
+  const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage);
+
+  useEffect(() => {
+    if (activeLng === i18n.resolvedLanguage || !shouldChangeLanguage) {
+      return;
+    }
+    setActiveLng(i18n.resolvedLanguage);
+  }, [activeLng, i18n.resolvedLanguage, shouldChangeLanguage]);
+
+  useEffect(() => {
+    if (!lng || !shouldChangeLanguage) {
+      return;
+    }
+    i18n.changeLanguage(lng);
+  }, [lng, i18n, shouldChangeLanguage]);
+
+  useEffect(() => {
+    if (cookies.i18next === lng || !shouldChangeLanguage) {
+      return;
+    }
+
+    setCookie(cookieName, lng, { path: '/' });
+  }, [lng, cookies.i18next, shouldChangeLanguage]);
+
   return ret;
 }
