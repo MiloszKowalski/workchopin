@@ -1,4 +1,14 @@
 {
   "title": "WorkChopin",
-  "subtitle": "Symfonia współpracy."
+  "subtitle": "Symfonia współpracy.",
+  "scrum-poker": {
+    "create-new-session": "Stwórz nową sesję",
+    "quick-session": "Szybka sesja",
+    "join-existing-room": "Dołącz do pokoju",
+    "saved-sessions": "Zapisane sesje",
+    "last-session": "Ostatnia sesja",
+    "preferences": "Ustawienia",
+    "about": "O aplikacji",
+    "exit": "Wyjście"
+  }
 }

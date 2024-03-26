@@ -1,4 +1,14 @@
 {
   "title": "WorkChopin",
-  "subtitle": "The symphony of teamwork."
+  "subtitle": "The symphony of teamwork.",
+  "scrum-poker": {
+    "create-new-session": "Create new session",
+    "quick-session": "Quick session",
+    "join-existing-room": "Join existing session",
+    "saved-sessions": "Saved sessions",
+    "last-session": "Last session",
+    "preferences": "Preferences",
+    "about": "About",
+    "exit": "Exit"
+  }
 }
