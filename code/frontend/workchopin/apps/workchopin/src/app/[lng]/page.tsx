@@ -10,7 +10,7 @@ import {
   SaveIcon,
   SettingsIcon,
 } from '@workchopin/workchopin-core';
-import { useTranslation, I18nParams } from '@workchopin/workchopin-i18n';
+import { I18nParams, useTranslation } from '@workchopin/workchopin-i18n';
 
 export default async function Index({ params: { lng } }: I18nParams) {
   const { t } = await useTranslation(lng);
@@ -25,23 +25,23 @@ export default async function Index({ params: { lng } }: I18nParams) {
           items={[
             {
               icon: <PlusIcon />,
-              title: 'Create new session',
-              subItem: { icon: <FlashIcon />, title: 'Quick session' },
+              title: t('scrum-poker.create-new-session'),
+              subItem: { icon: <FlashIcon />, title: t('scrum-poker.quick-session') },
             },
-            { icon: <ArrowRightIcon />, title: 'Join existing session' },
+            { icon: <ArrowRightIcon />, title: t('scrum-poker.join-existing-room') },
             {
               icon: <SaveIcon />,
-              title: 'Saved session',
-              subItem: { icon: <RecentIcon />, title: 'Last session' },
+              title: t('scrum-poker.saved-sessions'),
+              subItem: { icon: <RecentIcon />, title: t('scrum-poker.last-session') },
             },
             {
               icon: <SettingsIcon />,
-              title: 'Preferences',
-              subItem: { icon: <InfoIcon />, title: 'About' },
+              title: t('scrum-poker.preferences'),
+              subItem: { icon: <InfoIcon />, title: t('scrum-poker.about') },
             },
             {
               icon: <ExitIcon />,
-              title: 'Exit',
+              title: t('scrum-poker.exit'),
             },
           ]}
         />
